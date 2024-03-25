@@ -1,0 +1,197 @@
+@use 'variables' as var;
+@use 'initial';
+
+.main-container {
+    width: 344px;
+    margin: 68px auto;
+    @media(min-width: 600px) {
+        width: 540px;
+    }
+}
+
+.balance {
+    background-color: var.$SoftRed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 20px;
+    border-radius: 15px;
+    margin-bottom: 24px;
+
+    &__title {
+        color: var.$Cream;
+        font-size: 0.7em;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+    }
+
+    &__value {
+        color: var.$Cream;
+        font-size: 1.2em;
+        font-weight: 700;
+    }
+
+    &__logo {
+        width: 48px;
+    }
+
+    @media(min-width: 600px) {
+        padding: 40px 24px;
+
+        &__title {
+            font-size: 1.2em;
+        }
+
+        &__value {
+            font-size: 1.6em;
+        }
+
+        &__logo {
+            width: 70px;
+        }
+    }
+}
+
+.chart {
+    background-color: var.$VeryPaleOrange;
+    border-radius: 15px;
+    padding: 24px;
+    color: var.$MediumBrown;
+
+    &__title {
+        color: var.$DarkBrown;
+        font-size: 1.25em;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    &__container {
+        height: 220px;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        margin-bottom: 35px;
+    }
+
+    &__bar {
+        background-color: var.$SoftRed;
+        width: 32px;
+        height: 200px;
+        border-radius: 5px;
+        position: relative;
+
+        &--label {
+            display: none;
+            color: var.$Cream;
+            background-color: var.$DarkBrown;
+            border-radius: 4px;
+            width: 38px;
+            padding: 4px;
+            font-size: 0.5em;
+            font-weight: 700;
+            text-align: center;
+            position: absolute;
+            top: -24px;
+            left: -4px;  
+        }
+
+        &--day {
+            font-size: 0.5em;
+            font-weight: 700;
+            position: absolute;
+            bottom: -20px;
+            width: 32px;
+            text-align: center;
+        }
+
+        &:hover {
+            cursor: pointer;
+            filter: brightness(1.2);
+        }
+    }
+
+    &__analytics {
+        border-top: 2px solid var.$Cream;
+        padding: 20px 0 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__total {
+        font-size: 0.7em;
+        font-weight: 400;
+        margin-bottom: 5px;
+    }
+
+    &__total-value {
+        font-size: 1.2em;
+        font-weight: 700;
+        color: var.$DarkBrown;
+    }
+
+    &__percentage {
+        margin-top: 18px;
+        font-size: 0.7em;
+        font-weight: 700;
+        color: var.$DarkBrown;
+        text-align: right;
+    }
+
+    &__period {
+        font-size: 0.7em;
+        font-weight: 400;
+        text-align: right;
+    }
+
+    @media(min-width: 600px) {
+        padding: 44px 24px;
+
+        &__title {
+            font-size: 1.5em;
+        }
+
+        &__container {
+            margin-bottom: 50px;
+        }
+
+        &__bar {
+            width: 48px;
+
+            &--label {
+                font-size: 0.7em;
+                width: 60px;
+                padding: 6px;
+                top: -32px;
+                left: -6px;
+            }
+
+            &--day {
+                font-size: 0.7em;
+                width: 48px;
+            }
+        }
+
+        &__analytics {
+            padding: 24px 0 0;
+        }
+
+        &__total {
+            font-size: 0.9em;
+            margin-bottom: 8px;
+        }
+
+        &__total-value {
+            font-size: 1.6em;
+        }
+
+        &__percentage {
+            font-size: 0.9em;
+            margin-top: 24px;
+        }
+
+        &__period {
+            font-size: 0.9em;
+        }
+    }
+}
